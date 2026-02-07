@@ -1,13 +1,19 @@
+import sys
+from pathlib import Path
+
+# Add project root to path
+project_root = Path(__file__).parent.parent
+sys.path.insert(0, str(project_root))
+
 import numpy as np
 import pandas as pd
 import yfinance as yf
 from datetime import datetime
-from pytorch_scaler import MinMaxScaler
 import torch
 import torch.nn as nn
 import torch.optim as optim
 from torch.utils.data import DataLoader, TensorDataset
-from pytorch_model import StockPredictor
+from src.stock_predictor import StockPredictor, MinMaxScaler
 
 def train():
     print("Loading data...")

@@ -1,15 +1,20 @@
 import os
+import sys
 import tempfile
 from pathlib import Path
 import streamlit as st
 import pandas as pd
 import numpy as np
 import torch
-from pytorch_model import StockPredictor
 import yfinance as yf
 from datetime import datetime, timedelta
-from pytorch_scaler import MinMaxScaler
 import plotly.graph_objects as go
+
+# Add project root to path
+project_root = Path(__file__).parent
+sys.path.insert(0, str(project_root))
+
+from src.stock_predictor import StockPredictor, MinMaxScaler
 
 
 st.set_page_config(page_title="Stock Trend Predictor", page_icon="📈", layout="wide")

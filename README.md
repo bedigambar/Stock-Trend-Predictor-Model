@@ -17,13 +17,19 @@ A PyTorch-based machine learning project for predicting stock price trends using
 ```
 Stock-Trend-Predictor/
 ├── main.py                 # Streamlit web app for prediction and visualization
-├── train_pytorch.py        # Training script for PyTorch model
-├── pytorch_model.py         # PyTorch LSTM model architecture
-├── pytorch_scaler.py        # PyTorch-based MinMaxScaler implementation
-├── stock.ipynb             # Jupyter notebook for data exploration, training, and evaluation
+├── src/
+│   └── stock_predictor/    # Main package
+│       ├── __init__.py     # Package initialization
+│       ├── model.py        # PyTorch LSTM model architecture
+│       └── scaler.py       # PyTorch-based MinMaxScaler implementation
+├── scripts/
+│   └── train.py            # Training script for PyTorch model
+├── notebooks/
+│   └── stock.ipynb         # Jupyter notebook for data exploration, training, and evaluation
 ├── model.pth               # Pre-trained PyTorch model (generated after training, not included in repo)
 ├── requirements.txt        # Python dependencies
-└── .gitignore              # Git ignore file
+├── .gitignore              # Git ignore file
+└── LICENSE                 # License file
 ```
 
 ## Installation
@@ -52,7 +58,7 @@ Stock-Trend-Predictor/
 Train a new PyTorch model using the training script:
 
 ```bash
-python train_pytorch.py
+python scripts/train.py
 ```
 
 This will:
@@ -62,7 +68,7 @@ This will:
 - Save the model as `model.pth`
 
 To customize training:
-- Edit `stock_symbol` in `train_pytorch.py` to change the stock
+- Edit `stock_symbol` in `scripts/train.py` to change the stock
 - Adjust `epochs` to change training duration
 - Modify `seq_len` to change sequence length (default: 100)
 
@@ -83,7 +89,7 @@ streamlit run main.py
 
 Use the notebook for development, training, and evaluation.
 
-1. Open `stock.ipynb` in Jupyter Lab or VS Code.
+1. Open `notebooks/stock.ipynb` in Jupyter Lab or VS Code.
 2. Run cells in order:
    - Import libraries and download data.
    - Preprocess data (normalize columns, compute features).
@@ -125,8 +131,9 @@ See `requirements.txt` for the full list. Key packages:
 ## Notes
 
 - This project uses **pure PyTorch** - no scikit-learn or TensorFlow/Keras dependencies.
-- The `pytorch_scaler.py` module provides a drop-in replacement for sklearn's MinMaxScaler.
+- The `src/stock_predictor/scaler.py` module provides a drop-in replacement for sklearn's MinMaxScaler.
 - Models are saved as `.pth` files using PyTorch's state_dict format.
+- The project follows a clean package structure with organized directories for better maintainability.
 
 This project is for educational purposes. See [LICENSE](https://github.com/bedigambar/Stock-Trend-Predictor-Model/blob/main/LICENSE) file for details.
 
