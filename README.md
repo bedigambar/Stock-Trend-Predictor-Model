@@ -135,6 +135,10 @@ See `requirements.txt` for the full list. Key packages:
 - Models are saved as `.pth` files using PyTorch's state_dict format.
 - The project follows a clean package structure with organized directories for better maintainability.
 
-This project is for educational purposes. See [LICENSE](https://github.com/bedigambar/Stock-Trend-Predictor-Model/blob/main/LICENSE) file for details.
+## License & Attribution
+
+Stock Trend Predictor is released under the [MIT License](https://github.com/bedigambar/Stock-Trend-Predictor-Model/blob/main/LICENSE) — © 2026 bedigambar.
+
+You're welcome to use, modify and build on this code, but you must keep the copyright notice and license intact (i.e. give credit). If you ship something based on Stock Trend Predictor, a shout-out and a link back to [this repo](https://github.com/bedigambar/Stock-Trend-Predictor-Model) is hugely appreciated. 🙏
 
 Developed by Digambar.
