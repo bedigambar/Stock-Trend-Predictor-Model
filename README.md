@@ -1,6 +1,6 @@
 # Stock Trend Predictor
 
-A PyTorch-based machine learning project for predicting stock price trends using historical data from Yahoo Finance. This repository includes training scripts, Jupyter notebooks for model development, and a Streamlit web app for interactive visualization and prediction.
+A LSTM-based machine learning project for predicting stock price trends using historical data from Yahoo Finance. This repository includes training scripts, Jupyter notebooks for model development, and a Streamlit web app for interactive visualization and prediction.
 
 ## Features
 
